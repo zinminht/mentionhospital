@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Start Header */
+/* Start header info */
+.headerinfos{
+    height: 50px;
+    background-color: rgb(50, 50, 227);
+    color: #fff;
+    font-weight: bold;
+
+    display: block;
+}
+
+.headerinfos .infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+@media(max-width: 1000px){
+    .visiblelgs{
+        display: none;
+    }
+}
+/* End header info */
+
+/* Start banner */
+.carousel-item{
+    height: 90vh;
+}
+
+.banners1, .banners2, .banners3{
+    background-image: url(../assets/img/banner/banner4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 100px;
+}
+
+.banners2{
+    background-image: url(../assets/img/banner/banner5.jpg);
+}
+
+.banners3{
+    background-image: url(../assets/img/banner/banner6.jpg);
+}
+
+.banner-btns{
+    background-color: blue;
+    color: #fff;
+}
+
+.banner-btns:hover{
+    border-color: #fff;
+}
+/* End banner */
+/* End Header */
+
+/* Start our features */
+.iconboxes{
+    background-color: #fff;
+    text-align: center;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 40px 30px;
+
+    position: relative;
+}
+
+.icons{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(33, 119, 141);
+    color: #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: calc(50% - 35px);
+    top: -35px;
+}
+
+.iconboxes:hover .icons{
+    background: none;
+    color: rgb(33, 119, 141);
+
+    border: 3px solid rgb(33, 119, 141);
+}
+/* End our features */
+
+/* Start Info */
+.info-btns{
+    background-color: blue;
+    color: #fff;
+}
+
+.info-btns:hover{
+    color: blue;
+    border-color: blue;
+}
+
+.fromlefts{
+    animation-name: forleft;
+    animation-duration: 2.5s;
+}
+
+.fromrights{
+    animation-name: forright;
+    animation-duration: 2.5s;
+}
+
+@keyframes forleft{
+    from{
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes forright{
+    from{
+        transform: translateX(80px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* End Info */
+
+/* Start Adv */
+.advs{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.4)
+    ),url(../assets/img/banner/banner1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: #fff;
+    text-shadow: -5px 0 10px #000;
+}
+/* End Adv */
+
+/* Start Department */
+.deptboxes{
+    height: 300px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.deptboxes img{
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    transition: transform .5s;
+}
+
+.contents{
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+
+    padding: 5px 0;
+
+    position: absolute;
+    left: 10%;
+    bottom: -90%;
+
+    transition: all .5s;
+}
+
+.contents h5{
+    color: steelblue;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contents p{
+    width: 80%;
+    font-size: 14px;
+    margin: 20px auto;
+}
+
+.contents a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: steelblue;
+    color: #fff;
+    font-size: 14px;
+
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    
+    opacity: 0;
+
+    transition: opacity .5s;
+}
+
+.deptboxes:hover img{
+    transform: scale(1.2);
+}
+
+.deptboxes:hover .contents{
+    width: 100%;
+    height: 60%;
+
+    left: 0;
+    bottom: 0;
+}
+
+.deptboxes:hover a{
+    opacity: 1;
+    transition-delay: .3s;
+}
+/* End Department */
+
+/* Start Premises */
+#lightslider img{
+    width: 400px;
+}
+/* End Premises */
+
+/* Start Pricing */
+.pricingcards{
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    padding-bottom: 40px;
+
+    transition: all .4s;
+}
+
+.pricingcards:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+
+.pricingheaders{
+    padding: 40px 20px;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.pricingcards:hover .pricingheaders{
+    background: linear-gradient(
+        90deg,
+        blue,
+        skyblue
+    );
+    color: #fff;
+}
+
+.prices{
+    color: steelblue;
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 20px 0;
+}
+
+.pricingfeatures ul{
+    margin-bottom: 20px;
+}
+
+.pricingfeatures ul li{
+    padding: 5px 0;
+}
+
+.pricingfeatures a{
+    text-decoration: none;
+    background: linear-gradient(
+        90deg,
+        blue,
+        skyblue
+    );
+    color: #fff;
+    border-radius: 20px;
+
+    padding: 10px 20px;
+}
+
+.pricingfeatures a:hover{
+    background: linear-gradient(
+        -90deg,
+        blue,
+        skyblue
+    );
+}
+
+.movelefts{
+    animation-name: movefromleft;
+    animation-duration: 2.5s;
+}
+
+.movebottoms{
+    animation-name: movefrombottom;
+    animation-duration: 2.5s;
+}
+
+.moverights{
+    animation-name: movefromright;
+    animation-duration: 2.5s;
+}
+
+@keyframes movefromleft{
+    from{
+        transform: translate(-90px);
+        opacity: 0;
+    }
+    
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movefrombottom{
+    from{
+        transform: translateY(90px);
+        opacity: 0;
+    }
+    
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movefromright{
+    from{
+        transform: translate(90px);
+        opacity: 0;
+    }
+    
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+/* End Pricing */
+
+/* Start Join Us */
+.customforms{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+/* End Join Us */
+
+/* Start Footer */
+.socialicons a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+
+    padding: 8px;
+    margin: 0 5px;
+}
+
+.socialicons a:hover{
+    background-color: steelblue;
+}
+
+.footerlinks{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+
+    margin: 3px 0;
+
+    transition: all .4s;
+}
+
+.footerlinks:hover{
+    color: goldenrod;
+    letter-spacing: 2px;
+}
+/* End Footer */
+
+/* Start Progress */
+#progresses{
+    width: 50px;
+    height: 50px;
+    /* background-color: steelblue; */
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+
+    display: grid;
+    place-items: center;
+
+    z-index: 10;
+}
+
+#progressvalues{
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+
+    display: grid;
+    place-items: center;
+}
+/* End Progress */
